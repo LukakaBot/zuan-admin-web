@@ -8,6 +8,7 @@ async function bootstrap() {
 
   setupInterceptors(app);
   setupFilters(app);
+  app.setGlobalPrefix('zuan');
 
   await app.listen(process.env.PORT ?? 3000);
 }
