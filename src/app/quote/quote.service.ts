@@ -6,11 +6,9 @@ export class QuoteService {
   constructor(private readonly prisma: PrismaService) { }
 
   async findOne(id: number) {
-    const quote = await this.prisma.main.findMany();
-    // const quote = await this.prisma.quote.findUnique({
-    //   where: { id },
-    // });
-    console.log(quote);
-    return `This action returns a #${id} quote`;
+    const quote = await this.prisma.main.findUnique({
+      where: { id },
+    });
+    return quote;
   }
 }

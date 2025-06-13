@@ -13,8 +13,8 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Main {
+model main {
   id    Int    @id @default(autoincrement())
   text  String @unique
-  level String @unique
+  level String
 }
