@@ -1,11 +1,10 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "dist/main.js",
-      "use": "@vercel/node"
-    }
-  ],
+  "buildCommand": "pnpm build & node ./dis/src/main.js",
+  "outputDirectory": "dist",
+  "env": {
+    "DATABASE_URL": "file:../db/data.db"
+  },
   "routes": [
     {
       "src": "/(.*)",
