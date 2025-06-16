@@ -10,7 +10,7 @@ import { Observable, map, catchError, throwError } from 'rxjs';
 
 export interface IResponseData<T> {
   code: HttpStatus;
-  msg: string;
+  message: string;
   data?: T | null;
 }
 
@@ -24,7 +24,7 @@ export class TransformInterceptor<T>
     return next.handle().pipe(
       map<T, IResponseData<T>>((data) => ({
         code: HttpStatus.OK,
-        msg: '操作成功',
+        message: 'success',
         data,
       })),
     );
