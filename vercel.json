@@ -6,7 +6,7 @@
     "DATABASE_URL": "file:../db/data.db"
   },
   "functions": {
-    "src/main.js": {
+    "dist/src/main.js": {
       "memory": 1024,
       "maxDuration": 30,
       "includeFiles": "db/data.db"
