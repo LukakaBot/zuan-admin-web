@@ -9,4 +9,9 @@ export class QuoteController {
   findOne(@Query('id') id: string) {
     return this.quoteService.findOne(+id);
   }
+
+  @Get('all')
+  findAll() {
+    return this.quoteService.findAll();
+  }
 }

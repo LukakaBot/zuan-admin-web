@@ -1,5 +1,6 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { PrismaService } from 'src/services/prisma.service';
+// import { PrismaService } from 'src/services/prisma.service';
+import { PrismaService } from '../../services/prisma.service';
 
 @Injectable()
 export class QuoteService {
@@ -13,5 +14,11 @@ export class QuoteService {
       where: { id },
     });
     return quote;
+  }
+
+  async findAll() {
+    return new Promise((resolve) => {
+      resolve('11111');
+    });
   }
 }

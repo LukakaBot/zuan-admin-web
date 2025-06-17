@@ -5,8 +5,14 @@
   "compilerOptions": {
     "deleteOutDir": true,
     "assets": [
-      "**/*.prisma",
-      "**/*.db"
+      {
+        "include": "/**/*.prisma",
+        "outDir": "dist/src"
+      },
+      {
+        "include": "/**/*.db",
+        "outDir": "dist/src"
+      }
     ],
     "watchAssets": true
   }
